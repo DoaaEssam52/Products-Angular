@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+/* Import the Rubik font */
+@font-face {
+  font-family: "rubik";
+  src: url("./assets/fonts/rubik/rubik-regular.ttf");
+}
+
+@font-face {
+  font-family: "rubik-light";
+  src: url("./assets/fonts/rubik/rubik-light.ttf");
+}
+
+body {
+  font-family: "rubik";
+
+  background-color: #0e1323;
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 20px;
+  margin: 0;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+/* Styles for devices with a maximum width of 1280 pixels */
+@media only screen and (max-width: 1280px) {
+  body {
+    height: auto;
+  }
+}

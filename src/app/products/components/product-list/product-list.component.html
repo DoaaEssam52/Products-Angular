@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="filters-section">
+    <product-dashboard-filter></product-dashboard-filter>
+  </div>
+  <div class="main-content">
+    <div class="cards-section">
+      <product-card
+        *ngFor="let product of productList"
+        class="cards-section__card"
+        [product]="product"
+      ></product-card>
+    </div>
+  </div>
+</div>

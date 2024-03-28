@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .filters-section {
+    flex: 1;
+  }
+
+  .main-content {
+    flex: 5;
+  }
+
+  .cards-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    &__card {
+      width: calc(20% - 10px);
+      max-width: calc(20% - 10px);
+    }
+  }
+}
+
+/* Responsive Styles */
+
+/* CSS rules for devices with maximum width 1280px */
+@media only screen and (max-width: 1280px) {
+  .container .cards-section .cards-section__card {
+    width: calc(30% - 10px);
+    max-width: calc(30% - 10px);
+  }
+}
+
+/* CSS rules for devices with maximum width 1024px */
+@media only screen and (max-width: 1024px) {
+  .container .cards-section .cards-section__card {
+    width: calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
+}
+
+/* CSS rules for devices with maximum width 768px */
+@media only screen and (max-width: 768px) {
+  .container {
+    display: block;
+  }
+
+  .container .cards-section .cards-section__card {
+    width: calc(100% - 10px);
+    max-width: calc(100% - 10px);
+  }
+}

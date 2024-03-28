@@ -1,0 +1,133 @@
+.container {
+  background-color: #1c204b;
+
+  border-radius: 20px;
+
+  height: 100%;
+
+  &__details {
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 42px;
+
+    background-color: #5747ea;
+
+    border-radius: 20px;
+
+    img {
+      border: 3px solid white;
+      border-radius: 50%;
+
+      margin-bottom: 32px;
+    }
+
+    &__titles {
+      display: block;
+    }
+
+    &__title {
+      font-size: 15px;
+      font-family: "rubik-light";
+      font-weight: 300;
+
+      color: #bbc0ff;
+
+      margin: 0 0 10px !important;
+    }
+
+    &__subtitle {
+      font-size: 40px;
+      font-family: "rubik-light";
+      font-weight: 300;
+
+      color: white;
+
+      letter-spacing: 12px;
+
+      margin: 0;
+    }
+  }
+
+  &__filters {
+    background-color: transparent;
+
+    list-style-type: none;
+
+    li {
+      font-size: 18px;
+      font-family: "rubik-light";
+      font-family: 300;
+
+      color: #7078c9;
+
+      &:not(:last-child) {
+        margin-bottom: 21.5px;
+      }
+    }
+
+    &__active {
+      color: white !important;
+    }
+  }
+}
+
+/* Responsive Styles */
+
+/* CSS rules for devices with maximum width 768px */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 0;
+
+    &__details {
+      display: flex;
+      align-items: center;
+
+      padding: 10px 20px;
+
+      img {
+        width: 64px;
+        height: 64px;
+
+        margin-bottom: 0;
+        margin-inline-end: 20px;
+      }
+
+      &__titles {
+        display: flex;
+        align-items: center;
+      }
+
+      &__title {
+        margin-bottom: 8px;
+      }
+
+      &__subtitle {
+        font-size: 24px;
+
+        display: inline-flex;
+
+        margin-inline-end: 2px;
+
+        letter-spacing: 0;
+      }
+    }
+
+    &__filters {
+      display: flex;
+      justify-content: space-between;
+
+      padding: 0 20px;
+
+      transform: none;
+
+      li {
+        margin-bottom: 0;
+
+        &:not(:last-child) {
+          margin-inline-end: 21.5px;
+        }
+      }
+    }
+  }
+}

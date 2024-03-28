@@ -1,0 +1,25 @@
+<div class="card-container" [style.backgroundColor]="headerBackgroundColor">
+  <div class="card-container__header"></div>
+  <div class="product-card">
+    <div class="d-flex justify-content-between align-items-center">
+      <h1 class="product-card__category">{{ product.category }}</h1>
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="product-card__dot"></div>
+        <div class="product-card__dot"></div>
+        <div class="product-card__dot"></div>
+      </div>
+    </div>
+    <div class="product-details">
+      <h2 class="product-card__price">{{ product.price }}</h2>
+      <div class="product-card__container">
+        <small class="product-card__title">{{ product.title }}</small>
+        <div>
+          <small class="product-card__count">{{
+            "IN_STORE" | translate
+          }}</small>
+          <small class="product-card__count">{{ product.rating.count }}</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="container__details">
+    <img src="assets/images/Bitmap.svg" alt="User" />
+    <div class="container__details_titles">
+      <p class="container__details__title">{{ "REPORT_FOR" | translate }}</p>
+      <h2 class="container__details__subtitle">{{ "BEST" | translate }}</h2>
+      <h2 class="container__details__subtitle">{{ "SALES" | translate }}</h2>
+    </div>
+  </div>
+  <ul class="container__filters">
+    <li
+      *ngFor="let filter of filtersByTime; let i = index"
+      [class.container__filters__active]="filter === selectedTimeFilter"
+      (click)="updateSelectedTimeFilter(filter)"
+      [id]="'filter' + i"
+    >
+      {{ filter.toUpperCase() | translate }}
+    </li>
+  </ul>
+</div>

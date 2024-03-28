@@ -1,0 +1,96 @@
+.card-container {
+  border-radius: 22px;
+
+  margin: 0;
+
+  &__header {
+    height: 42px;
+
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+
+  .product-card {
+    background-color: #1c204b;
+
+    height: 199px;
+    padding: 20px;
+    box-sizing: border-box;
+
+    border-radius: 20px;
+
+    &__category,
+    &__price,
+    &__count {
+      color: white;
+    }
+
+    &__category {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    &__dot {
+      width: 5px;
+      height: 5px;
+
+      background-color: white;
+
+      border-radius: 50%;
+
+      &:not(:last-child) {
+        margin-inline-end: 3px;
+      }
+    }
+
+    &__details {
+      margin-top: 46px;
+    }
+
+    &__price {
+      font-size: 39px;
+      font-family: "rubik-light";
+      font-weight: 300;
+
+      margin-bottom: 10px;
+    }
+
+    &__title,
+    &__count {
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    &__count {
+      display: block;
+
+      text-align: center;
+    }
+
+    &__title {
+      color: #bbc0ff;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+/* Responsive Styles */
+
+/* CSS rules for devices with maximum width 768px */
+@media only screen and (max-width: 768px) {
+  .product-card {
+    &__count {
+      display: none !important;
+    }
+  }
+}
