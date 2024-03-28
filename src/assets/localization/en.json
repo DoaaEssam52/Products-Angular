@@ -5,5 +5,6 @@
   "IN_STORE": "InStore",
   "DAILY": "Daily",
   "WEEKLY": "Weekly",
-  "MONTHLY": "Monthly"
+  "MONTHLY": "Monthly",
+  "DATA_IS_LOADING": "Data is loading..."
 }

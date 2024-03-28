@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { TranslateModule } from '@ngx-translate/core';
 
@@ -8,8 +9,12 @@ import { ProductListComponent } from './components/product-list/product-list.com
 import { ProductDashboardFilterComponent } from './components/product-dashboard-filter/product-dashboard-filter.component';
 
 @NgModule({
-  declarations: [ProductCardComponent, ProductListComponent, ProductDashboardFilterComponent],
-  imports: [CommonModule, TranslateModule],
+  declarations: [
+    ProductCardComponent,
+    ProductListComponent,
+    ProductDashboardFilterComponent,
+  ],
+  imports: [CommonModule, BrowserModule, TranslateModule],
   exports: [ProductCardComponent, ProductListComponent],
 })
 export class ProductsModule {}

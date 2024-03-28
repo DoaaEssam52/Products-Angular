@@ -12,6 +12,8 @@ export class ProductListComponent implements OnInit {
 
   productLimit: number = 10; // Default products limit
 
+  isLoading = true;
+
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
@@ -22,7 +24,10 @@ export class ProductListComponent implements OnInit {
     this.productService.getProductList(this.productLimit).subscribe({
       next: (response) => {
         this.productList = response;
+
+        this.isLoading = false;
       },
+      error: () => (this.isLoading = false),
     });
   }
 }
